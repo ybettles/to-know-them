@@ -1,5 +1,9 @@
+mod ui;
+
 use bevy::{prelude::*, window::WindowResolution};
 use std::{sync::LazyLock};
+
+use ui::UiPlugin;
 
 static GAME_BACKGROUND_COLOR: LazyLock<Color> = LazyLock::new(|| Color::srgb_u8(100, 144, 199));
 static TKT_GREEN: LazyLock<Color> = LazyLock::new(|| Color::srgb_u8(142, 177, 157));
@@ -8,9 +12,18 @@ static TKT_PINK: LazyLock<Color> = LazyLock::new(|| Color::srgb_u8(240, 210, 209
 static TKT_BLUE: LazyLock<Color> = LazyLock::new(|| Color::srgb_u8(77, 83, 130));
 static TKT_VIOLET: LazyLock<Color> = LazyLock::new(|| Color::srgb_u8(81, 70, 99));
 
+#[derive(Clone, Copy, Default, Eq, PartialEq, Debug, Hash, States)]
+pub(crate) enum GameState {
+    Game,
+    Pause,
+    Menu,
+    #[default]
+    Splash,
+}
+
 fn main() {
     let mut app = App::new();
-    app.add_plugins(
+    app.add_plugins((
         DefaultPlugins.set(ImagePlugin::default_nearest()).set(WindowPlugin {
             primary_window: Some(Window {
                 title: format!("To Know Them {}", env!("CARGO_PKG_VERSION")),
@@ -22,14 +35,16 @@ fn main() {
             }),
             ..default()
         }),
-    // Add plugins here
-    );
+        UiPlugin,
+    ));
     app.add_systems(
         Startup, setup_sys,
         // Add other systems here
     );
 
     app.insert_resource(ClearColor(*GAME_BACKGROUND_COLOR));
+
+    app.init_state::<GameState>();
 
     app.run();
 }
