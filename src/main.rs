@@ -1,7 +1,12 @@
 use bevy::{prelude::*, window::WindowResolution};
 use std::{sync::LazyLock};
 
-static GAME_BACKGROUND_COLOR: LazyLock<Color> = LazyLock::new(|| Color::srgb_u8(56, 47, 30));
+static GAME_BACKGROUND_COLOR: LazyLock<Color> = LazyLock::new(|| Color::srgb_u8(100, 144, 199));
+static TKT_GREEN: LazyLock<Color> = LazyLock::new(|| Color::srgb_u8(142, 177, 157));
+static TKT_YELLOW: LazyLock<Color> = LazyLock::new(|| Color::srgb_u8(246, 239, 166));
+static TKT_PINK: LazyLock<Color> = LazyLock::new(|| Color::srgb_u8(240, 210, 209));
+static TKT_BLUE: LazyLock<Color> = LazyLock::new(|| Color::srgb_u8(77, 83, 130));
+static TKT_VIOLET: LazyLock<Color> = LazyLock::new(|| Color::srgb_u8(81, 70, 99));
 
 fn main() {
     let mut app = App::new();
