@@ -1,0 +1,81 @@
+{
+  "tutorial": {
+    "name": "Mr Arbor",
+    "dialogue": {
+      "line1": "Good mornin', Willow!",
+      "line2": "It's great to see the shop back up and runnin'.",
+      "line3": "I know things have been tough for you, since...",
+      "line4": "Well...",
+      "line5": "Y'know. Best not to dwell on these things.",
+      "line6": "Keepin' busy'll keep your mind off it, anyhow.",
+      "line7": "And speakin' of busy, here comes your first customer!",
+      "line8": "Best of luck!"
+    }
+  },
+  "customers": {
+    "customer1": {
+      "name": "Jenny",
+      "request": {
+        "line1": "Hi Willow.",
+        "line2": "It's good to see you're back in town.",
+        "line3": "I hope you've been taking good care of yourself.",
+        "line4": "Anyway. I'm here to order some flowers, please.",
+        "line5": "My cousin, Peter, suddenly passed away on Saturday,",
+        "line6": "it's a terrible shame, truly.",
+        "line7": "I didn't know him all too well, in all honesty.",
+        "line8": "I've hardly seen him since we were kids.",
+        "line9": "I'd like something classic to honour him, please.",
+        "line10": "My auntie says he wouldn't have liked a big fuss anyway."
+      },
+      "hints": {
+        "1": "Jenny said she'd like something classic to honour her cousin.",
+        "2": "White lillies are described as 'classic, elegant flowers' in the handbook."
+      },
+      "keywords": ["classic"],
+      "thankyou": {
+        "line1":"Aw, this is lovely.",
+        "line2": "Thank you, Willow.",
+        "line3": "You've outdone yourself as always."
+      },
+      "reminiscing": {
+        "line1": "And... oh wow, these white lillies are perfect.",
+        "line2": "What a beautiful way to honour his memory.",
+        "line3": "You know, Auntie's old dog was named Lily.",
+        "line4": "Peter and I used to walk her together when we were kids.",
+        "line5": "We'd tire ourselves out running around the park for hours at a time.",
+        "line6": "He was always much faster than me, but I never minded.",
+        "line7": "Huh. I haven't thought about those days with Lily and Peter in years.",
+        "line8": "What are the chances.",
+        "line9": "Thank you, Willow, this is truly perfect."
+      }
+    },
+    "customerXXX": {
+      "name": "Name",
+      "request": {
+        "line1": "",
+        "line2": "",
+        "line3": "",
+        "line4": "",
+        "line5": ""
+      },
+      "hints": {
+        "1": "Hinty hint hint",
+        "2": "Really obvious hint"
+      },
+      "thankyou": {
+        "line1": "",
+        "line2": "",
+        "line3": "",
+        "line4": "",
+        "line5": ""
+      },
+      "reminiscing": {
+        "line1": "",
+        "line2": "",
+        "line3": "",
+        "line4": "",
+        "line5": ""
+      }
+    }
+  }
+}
