@@ -4512,6 +4512,8 @@ dependencies = [
  "bevy",
  "clang",
  "mold",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]

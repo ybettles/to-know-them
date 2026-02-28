@@ -1,4 +1,5 @@
 mod ui;
+mod dialogue;
 
 use bevy::{prelude::*, window::WindowResolution};
 use std::{sync::LazyLock};
@@ -12,6 +13,8 @@ static TKT_PINK: LazyLock<Color> = LazyLock::new(|| Color::srgb_u8(240, 210, 209
 static TKT_BLUE: LazyLock<Color> = LazyLock::new(|| Color::srgb_u8(77, 83, 130));
 static TKT_VIOLET: LazyLock<Color> = LazyLock::new(|| Color::srgb_u8(81, 70, 99));
 
+static FIRST_CUSTOMER: String = "Jenny";
+
 #[derive(Clone, Copy, Default, Eq, PartialEq, Debug, Hash, States)]
 pub(crate) enum GameState {
     Game,
@@ -20,6 +23,19 @@ pub(crate) enum GameState {
     #[default]
     Splash,
 }
+
+#[derive(Clone, Copy, Default, Eq, PartialEq, Debug, Hash, States)]
+pub(crate) enum PlayState {
+    CustomerRequest,
+    PlayerPuzzle,
+    CustomerThank,
+    CustomerBonus,
+    #[default]
+    Disabled,
+}
+
+#[derive(Resource)]
+struct CurrentCustomer { value: String }
 
 fn main() {
     let mut app = App::new();
@@ -43,6 +59,7 @@ fn main() {
     );
 
     app.insert_resource(ClearColor(*GAME_BACKGROUND_COLOR));
+    app.insert_resource(CurrentCustomer(FIRST_CUSTOMER));
 
     app.init_state::<GameState>();
 

@@ -1,0 +1,36 @@
+{
+  "name": "Jenny",
+  "request": [
+    "Hi Willow.",
+    "It's good to see you're back in town.",
+    "I hope you've been taking good care of yourself.",
+    "Anyway. I'm here to order some flowers, please.",
+    "My cousin, Peter, suddenly passed away on Saturday,",
+    "it's a terrible shame, truly.",
+    "I didn't know him all too well, in all honesty.",
+    "I've hardly seen him since we were kids.",
+    "I'd like something classic to honour him, please.",
+    "Auntie says he wouldn't have liked a big fuss anyway."
+  ],
+  "hints": [
+    "Jenny said she'd like something classic to honour her cousin.",
+    "White lillies are described as 'classic, elegant flowers' in the handbook."
+  ],
+  "keywords": ["classic"],
+  "thankyou": [
+    "Aw, this is lovely.",
+    "Thank you, Willow.",
+    "You've outdone yourself as always."
+  ],
+  "bonus_thankyou": [
+    "And... oh wow, these white lillies are perfect.",
+    "What a beautiful way to honour his memory.",
+    "You know, Auntie's old dog was named Lily.",
+    "Peter and I used to walk her together when we were kids.",
+    "We'd tire ourselves out running around the park for hours at a time.",
+    "He was always much faster than me, but I never minded.",
+    "Huh. I haven't thought about those days with Lily and Peter in years.",
+    "What are the chances.",
+    "Thank you, Willow, this is truly perfect."
+  ]
+}
